@@ -6,7 +6,7 @@ print('*         Welcome to the CMS         *')
 print('**************************************')
 user_name = input('Enter your name: ')
 data=[user_name]
-X=[]
+X=[] # initialize list to store registered courses
 
 if Path('{0}.txt'.format(data[0])).is_file(): # checking file exist
     file = open('{0}.txt'.format(data[0]),"r") #{0} using for read file name by username
