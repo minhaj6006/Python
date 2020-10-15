@@ -56,7 +56,7 @@ while (b):
                         j += 1
 
                 sel_c = input("Please Enter The course No. OR type y to Main Menu: ")
-                file = open('{0}.txt'.format(data[0]),"a") # this point text file open to append the values
+                #file = open('{0}.txt'.format(data[0]),"a") # this point text file open to append the values
 
                 if(sel_c == 'y'):
                     break
@@ -136,7 +136,7 @@ while (b):
             for i in X: # this loop using for add numbering
                 j += 1
                 print(' '.join([str(j),i]) )
-            sel_c = (input("\nPlease select the course to unregistered: "))
+            sel_c = (input("\nPlease select the course to unregistered OR Press y to Main Menu: "))
             file = open('{0}.txt'.format(data[0]),"a")
             if(sel_c == 'y'):
                 continue #The continue statement in Python returns the control to the beginning of the while loop or for loop
