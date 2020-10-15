@@ -4,7 +4,7 @@ master_file = "available_courses.txt"
 print('**************************************')
 print('*         Welcome to the CMS         *')
 print('**************************************')
-user_name = input('Enter your name: ')
+user_name = input('Register your self by your name: ')
 data=[user_name]
 X=[] # initialize list to store registered courses
 
@@ -12,6 +12,7 @@ if Path('{0}.txt'.format(data[0])).is_file(): # checking file exist
     file = open('{0}.txt'.format(data[0]),"r") #{0} using for read file name by username
     X = [line.rstrip('\n') for line in open(data[0] + ".txt" )] # this point text file convert into list
     print('\n--------------------')
+    print('Already Registered')
     print('Welcome Back ' + user_name)
 else:
     file = open('{0}.txt'.format(data[0]),"w") #{0} using for write file name by username
@@ -20,9 +21,10 @@ else:
 
 b=True
 while (b):
-    print('\n************* Main Menu *************')
-    print('-------------------------------------')
+    print('\n************ Main Menu ************')
+    print('-----------------------------------')
     print('1. Register Courses. \n2. Drop Courses. \n3. List Registered Courses.\n4. Exit Registration Program.')
+    print('-----------------------------------')
     option1 = '1'
     option2 = '2'
     option3 = '3'
@@ -177,7 +179,7 @@ while (b):
     elif user_input == option3: # View registered courses
         if not X:
             print('-----------------------------------------------')
-            print('Registered in any course before select option 2')
+            print('Registered in any course before select option 3')
             print('-----------------------------------------------')
         else:
             print('\nYou are registered in these courses:')
