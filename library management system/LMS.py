@@ -1,4 +1,4 @@
-from pathlib import Path
+
 # import smtplib
 # content = "bla bla bla"
 # user_name = input('Register your self by your name: ')
