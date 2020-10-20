@@ -1,4 +1,3 @@
-
 # import smtplib
 # content = "bla bla bla"
 # user_name = input('Register your self by your name: ')
@@ -20,7 +19,7 @@ ask_name = input('Register your self by name: ')
 ask_email = input('enter your emai: ')
 name_data=[ask_name] #store user name
 emai_data=[ask_email] #store user email
-p_books=[]
+select_books=[]
 
 
 b=True
