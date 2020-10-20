@@ -27,9 +27,7 @@ book_index_mapping = {1: "HP1",
 print('*************************************')
 print('*     Library Management System     *')
 print('*************************************')
-ask_name = input('Register your self by name: ')
-ask_email = input('enter your emai: ')
-name_data=[ask_name] #store user name
+ask_email = input('Register your self by email: ')
 emai_data=[ask_email] #store user email
 select_books=[]
 
@@ -44,4 +42,23 @@ while (b):
     option2 = '2'
     option3 = '3'
     option4 = '4'
-    choose_option = input ('Select your option: ')
+    choose_option = input('Select your option: ')
+
+# option 1 Select Book
+    if choose_option == option1:
+        if(len(select_books) == 3):
+            print('\n----------------------------')
+            print('Only 3 books allowed to pick')
+            print('----------------------------')
+            break
+        else:
+            count = 0
+            for i in available_books: # this loop using for add numbering
+                count += 1
+                print(f"{count}" + " " + available_books[i])
+
+# option 4 exit
+    elif choose_option == option4: # this point exit program
+        print('\n---------------------------')
+        print('Thank you for using our LMS\n')
+        break
