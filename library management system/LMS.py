@@ -8,10 +8,22 @@
 ############################################################################
 available_books = {"HP1" : "Harry Potter",
                    "TTS" : "The Twilight Saga",
-                   "TLR": "The Lord of the Rings",
-                   "TH1": "The Hobbit",
-                   ""
-}
+                   "TLR" : "The Lord of the Rings",
+                   "TH1" : "The Hobbit",
+                   "TTT" : "The Top Ten",
+                   "TGG" : "The Great Gatsby",
+                   "LWF" : "Long Walk to Freedom",
+                   "SJ1" : "Steve Jobs"}
+
+book_index_mapping = {1: "HP1",
+                      2: "TTS",
+                      3: "TLR",
+                      4: "TH1",
+                      5: "TTT",
+                      6: "TGG",
+                      7: "LWF",
+                      8: "SJ1",}
+
 print('*************************************')
 print('*     Library Management System     *')
 print('*************************************')
