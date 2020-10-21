@@ -1,10 +1,15 @@
 # import smtplib
-# content = "bla bla bla"
-# user_name = input('Register your self by your name: ')
-# mail = smtplib.SMTP("smtp.gmail.com",587)
-# mail.login("librarykarachi@gmail.com","0000Qwerty")
-# mail.sendmail("librarykarachi@gmail.com","minhaj6006@gmail.com", content)
-# mail.close()
+# fromaddr = 'librarykarachi@gmail.com'
+# toaddrs  = 'minhaj6006@gmail.com'
+# msg = 'bla bla bla bla'
+# username = 'librarykarachi@gmail.com'
+# password = '0000Qwerty'
+# server = smtplib.SMTP('smtp.gmail.com: 587')
+# server.starttls()
+# server.login(username , password)
+# server.sendmail(fromaddr, toaddrs, msg)
+# server.quit()
+# print("sent!")
 ############################################################################
 available_books = {"HP1" : "Harry Potter",
                    "TTS" : "The Twilight Saga",
