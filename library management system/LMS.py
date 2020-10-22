@@ -1,3 +1,5 @@
+from pathlib import Path
+import time
 # import smtplib
 # fromaddr = 'librarykarachi@gmail.com'
 # toaddrs  = 'minhaj6006@gmail.com'
@@ -11,7 +13,7 @@
 # server.quit()
 # print("sent!")
 ############################################################################
-from pathlib import Path
+
 available_books = {"HP1" : "Harry Potter",
                    "TTS" : "The Twilight Saga",
                    "TLR" : "The Lord of the Rings",
@@ -36,7 +38,7 @@ print('*************************************')
 ask_name = input('\nRegister your self by name: ')
 ask_email = input('enter your email: ')
 name_data = [ask_name] # store user naem
-emai_data = [ask_email] #store user email
+emai_data = [ask_email] # store user email
 select_books = []
 
 
