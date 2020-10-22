@@ -13,24 +13,25 @@ import time
 # server.quit()
 # print("sent!")
 ############################################################################
+available_books = ["Harry Potter", 'The Twilight Saga',"The Lord of the Rings","The Hobbit","The Top Ten","The Great Gatsby", "Long Walk to Freedom", "Long Walk to Freedom",]
+a_books = [line.rstrip('\n') for line in (available_books)]
+# available_books = {"HP1" : "Harry Potter",
+#                    "TTS" : "The Twilight Saga",
+#                    "TLR" : "The Lord of the Rings",
+#                    "TH1" : "The Hobbit",
+#                    "TTT" : "The Top Ten",
+#                    "TGG" : "The Great Gatsby",
+#                    "LWF" : "Long Walk to Freedom",
+#                    "SJ1""Steve Jobs"}
 
-available_books = {"HP1" : "Harry Potter",
-                   "TTS" : "The Twilight Saga",
-                   "TLR" : "The Lord of the Rings",
-                   "TH1" : "The Hobbit",
-                   "TTT" : "The Top Ten",
-                   "TGG" : "The Great Gatsby",
-                   "LWF" : "Long Walk to Freedom",
-                   "SJ1" : "Steve Jobs"}
-
-book_index_mapping = {1: "HP1",
-                      2: "TTS",
-                      3: "TLR",
-                      4: "TH1",
-                      5: "TTT",
-                      6: "TGG",
-                      7: "LWF",
-                      8: "SJ1",}
+# book_index_mapping = {1: "HP1",
+#                       2: "TTS",
+#                       3: "TLR",
+#                       4: "TH1",
+#                       5: "TTT",
+#                       6: "TGG",
+#                       7: "LWF",
+#                       8: "SJ1",}
 
 print('*************************************')
 print('*     Library Management System     *')
@@ -80,18 +81,19 @@ while (b):
             count = 0
             print('\n    Available Books ')
             print('-----------------------')
-            for i in available_books: # this loop using for add numbering
+            for i in a_books: # this loop using for add numbering
                 count += 1
-                print(f"{count}" + " " + available_books[i])
+                print(' '.join([str(count),i]) )
+                # print(f"{count}" + " " + a_books[i])
             print('-----------------------\n')
 
             b_select = int(input('Select the book: '))
 
-            if (b_select == 1 and book_index_mapping[1] not in select_books):
-                file.write(str("%s\n" % book_index_mapping[1]))
-                select_books.append(book_index_mapping[1])
-                print('rent' + book_index_mapping[1])
-            elif (b_select == 1 and book_index_mapping[1] in select_books):
+            if (b_select == 1 and a_books[0] not in select_books):
+                file.write(str("%s\n" % a_books[0]))
+                select_books.append(a_books[0])
+                print('rent' + a_books[0])
+            elif (b_select == 1 and a_books[0] in select_books):
                 print('\nYou are already rented this book')
 
 
