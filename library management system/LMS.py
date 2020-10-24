@@ -15,23 +15,6 @@ import time
 ############################################################################
 available_books = ["Harry Potter", 'The Twilight Saga',"The Lord of the Rings","The Hobbit","The Top Ten","The Great Gatsby", "Long Walk to Freedom", "Long Walk to Freedom",]
 a_books = [line.rstrip('\n') for line in (available_books)]
-# available_books = {"HP1" : "Harry Potter",
-#                    "TTS" : "The Twilight Saga",
-#                    "TLR" : "The Lord of the Rings",
-#                    "TH1" : "The Hobbit",
-#                    "TTT" : "The Top Ten",
-#                    "TGG" : "The Great Gatsby",
-#                    "LWF" : "Long Walk to Freedom",
-#                    "SJ1""Steve Jobs"}
-
-# book_index_mapping = {1: "HP1",
-#                       2: "TTS",
-#                       3: "TLR",
-#                       4: "TH1",
-#                       5: "TTT",
-#                       6: "TGG",
-#                       7: "LWF",
-#                       8: "SJ1",}
 
 print('*************************************')
 print('*     Library Management System     *')
@@ -63,7 +46,7 @@ b=True
 while (b):
     print('\n************ Main Menu ************')
     print('-----------------------------------')
-    print('1. Checkout Book. \n2. Return Book. \n3. Show rented Books .\n4. Exit Program.')
+    print('1. Checkout Book. \n2. Return Book. \n3. Show Rented Books .\n4. Exit Program.')
     print('-----------------------------------')
     option1 = '1'
     option2 = '2'
@@ -174,9 +157,9 @@ while (b):
 # option 2 Return Book
     elif choose_option == option2:
         if not select_books:
-            print('--------------------------------------------')
-            print('Checkout the any Book before select option 2')
-            print('--------------------------------------------')
+            print('---------------------------------------')
+            print('Checkout the book before select option 2')
+            print('---------------------------------------')
         else:
             file = open('{0}.txt'.format(name_data[0]),"r")
             print('\nYou are registered in these courses:')
@@ -189,9 +172,9 @@ while (b):
 # option3 Show rent book
     elif choose_option == option3:
         if not select_books:
-            print('--------------------------------------------')
-            print('Checkout the any Book before select option 3')
-            print('--------------------------------------------')
+            print('----------------------------------------')
+            print('Checkout the Book before select option 3')
+            print('----------------------------------------')
         else:
             s_books = [line.rstrip('\n') for line in (select_books)]
             count = 0
