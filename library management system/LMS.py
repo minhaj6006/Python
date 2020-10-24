@@ -86,7 +86,6 @@ while (b):
             for i in a_books: # this loop using for add numbering
                 count += 1
                 print(' '.join([str(count),i]) )
-                # print(f"{count}" + " " + a_books[i])
             print('-----------------------\n')
 
             b_select = int(input('Select the book: '))
