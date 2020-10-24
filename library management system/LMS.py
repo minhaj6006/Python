@@ -211,4 +211,5 @@ while (b):
     elif choose_option == option4: # this point exit program
         print('\n---------------------------')
         print('Thank you for using our LMS\n')
+        file.close()
         break
