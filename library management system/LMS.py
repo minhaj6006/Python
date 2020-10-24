@@ -187,7 +187,6 @@ while (b):
                 j += 1
                 print(' '.join([str(j),i]) )
 
-
 # option3 Show rent book
     elif choose_option == option3:
         s_books = [line.rstrip('\n') for line in (select_books)]
