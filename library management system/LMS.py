@@ -188,19 +188,24 @@ while (b):
 
 # option3 Show rent book
     elif choose_option == option3:
-        s_books = [line.rstrip('\n') for line in (select_books)]
-        count = 0
-        print('\nYou rented these books.')
-        print('-----------------------')
-        for i in s_books: # this loop using for add numbering
-            count += 1
-            print(' '.join([str(count),i]) )
-        print('-----------------------')
-        r = (int(input("\npress 1 to return Main Menu and press 0 to exit: ")))
-        if r == 1:
-            continue
-        elif r == 0:
-            break
+        if not select_books:
+            print('--------------------------------------------')
+            print('Checkout the any Book before select option 3')
+            print('--------------------------------------------')
+        else:
+            s_books = [line.rstrip('\n') for line in (select_books)]
+            count = 0
+            print('\nYou rented these books.')
+            print('-----------------------')
+            for i in s_books: # this loop using for add numbering
+                count += 1
+                print(' '.join([str(count),i]) )
+            print('-----------------------')
+            r = (int(input("\npress 1 to return Main Menu and press 0 to exit: ")))
+            if r == 1:
+                continue
+            elif r == 0:
+                break
 
 # option 4 exit
     elif choose_option == option4: # this point exit program
