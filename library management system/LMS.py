@@ -172,7 +172,20 @@ while (b):
             elif (b_select == 8 and a_books[7] in select_books):
                 print('\nYou are already rented this book')
 
-
+# option 2 Return Book
+    elif choose_option == option2:
+        if not select_books:
+            print('--------------------------------------------')
+            print('Checkout the any Book before select option 2')
+            print('--------------------------------------------')
+        else:
+            file = open('{0}.txt'.format(name_data[0]),"r")
+            print('\nYou are registered in these courses:')
+            print('------------------------------------')
+            j = 0
+            for i in select_books: # this loop using for add numbering
+                j += 1
+                print(' '.join([str(j),i]) )
 
 
 # option3 Show rent book
