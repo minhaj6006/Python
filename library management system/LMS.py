@@ -40,7 +40,9 @@ ask_name = input('\nRegister your self by name: ')
 ask_email = input('enter your email: ')
 name_data = [ask_name] # store user naem
 emai_data = [ask_email] # store user email
+store_time = []
 select_books = []
+
 
 
 if Path('{0}.txt'.format(name_data[0])).is_file(): # checking file exist
@@ -93,8 +95,83 @@ while (b):
                 file.write(str("%s\n" % a_books[0]))
                 select_books.append(a_books[0])
                 print('rent' + a_books[0])
+                rent = time.time()
+                s_rent=[rent]
+                store_time.append('{0}'.format(s_rent[0]))
+                file.write(str('%s\n'% store_time[0]))
             elif (b_select == 1 and a_books[0] in select_books):
                 print('\nYou are already rented this book')
+            if (b_select == 2 and a_books[1] not in select_books):
+                file.write(str("%s\n" % a_books[1]))
+                select_books.append(a_books[1])
+                print('rent' + a_books[1])
+                rent = time.time()
+                s_rent=[rent]
+                store_time.append('{0}'.format(s_rent[0]))
+                file.write(str('%s\n'% store_time[0]))
+            elif (b_select == 2 and a_books[1] in select_books):
+                print('\nYou are already rented this book')
+            if (b_select == 3 and a_books[2] not in select_books):
+                file.write(str("%s\n" % a_books[2]))
+                select_books.append(a_books[2])
+                print('rent' + a_books[2])
+                rent = time.time()
+                s_rent=[rent]
+                store_time.append('{0}'.format(s_rent[0]))
+                file.write(str('%s\n'% store_time[0]))
+            elif (b_select == 3 and a_books[2] in select_books):
+                print('\nYou are already rented this book')
+            if (b_select == 4 and a_books[3] not in select_books):
+                file.write(str("%s\n" % a_books[3]))
+                select_books.append(a_books[3])
+                print('rent' + a_books[3])
+                rent = time.time()
+                s_rent=[rent]
+                store_time.append('{0}'.format(s_rent[0]))
+                file.write(str('%s\n'% store_time[0]))
+            elif (b_select == 4 and a_books[3] in select_books):
+                print('\nYou are already rented this book')
+            if (b_select == 5 and a_books[4] not in select_books):
+                file.write(str("%s\n" % a_books[4]))
+                select_books.append(a_books[4])
+                print('rent' + a_books[4])
+                rent = time.time()
+                s_rent=[rent]
+                store_time.append('{0}'.format(s_rent[0]))
+                file.write(str('%s\n'% store_time[0]))
+            elif (b_select == 5 and a_books[4] in select_books):
+                print('\nYou are already rented this book')
+            if (b_select == 6 and a_books[5] not in select_books):
+                file.write(str("%s\n" % a_books[5]))
+                select_books.append(a_books[5])
+                print('rent' + a_books[5])
+                rent = time.time()
+                s_rent=[rent]
+                store_time.append('{0}'.format(s_rent[0]))
+                file.write(str('%s\n'% store_time[0]))
+            elif (b_select == 6 and a_books[5] in select_books):
+                print('\nYou are already rented this book')
+            if (b_select == 7 and a_books[6] not in select_books):
+                file.write(str("%s\n" % a_books[6]))
+                select_books.append(a_books[6])
+                print('rent' + a_books[6])
+                rent = time.time()
+                s_rent=[rent]
+                store_time.append('{0}'.format(s_rent[0]))
+                file.write(str('%s\n'% store_time[0]))
+            elif (b_select == 7 and a_books[6] in select_books):
+                print('\nYou are already rented this book')
+            if (b_select == 8 and a_books[7] not in select_books):
+                file.write(str("%s\n" % a_books[7]))
+                select_books.append(a_books[7])
+                print('rent' + a_books[7])
+                rent = time.time()
+                s_rent=[rent]
+                store_time.append('{0}'.format(s_rent[0]))
+                file.write(str('%s\n'% store_time[0]))
+            elif (b_select == 8 and a_books[7] in select_books):
+                print('\nYou are already rented this book')
+
 
 
 
