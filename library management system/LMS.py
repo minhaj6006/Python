@@ -12,7 +12,7 @@ import time
 # server.sendmail(fromaddr, toaddrs, msg)
 # server.quit()
 # print("sent!")
-############################################################################
+
 available_books = ["Harry Potter", 'The Twilight Saga',"The Lord of the Rings","The Hobbit","The Top Ten","The Great Gatsby", "Long Walk to Freedom", "Long Walk to Freedom",]
 a_books = [line.rstrip('\n') for line in (available_books)]
 
@@ -26,10 +26,8 @@ emai_data = [ask_email] # store user email
 store_time = []
 select_books = []
 
-
-
 if Path('{0}.txt'.format(name_data[0])).is_file(): # checking file exist
-    file = open('{0}.txt'.format(name_data[0]),"r") #{0} using for read file name by username
+    file = open('{0}.txt'.format(name_data[0]),"r")
     select_books = [line.rstrip('\n') for line in open(name_data[0] + ".txt" )] # this point text file convert into list
     print('\n--------------------')
     print('Already Registered')
@@ -54,7 +52,7 @@ while (b):
     option4 = '4'
     choose_option = input('Select your option: ')
 
-# option 1 Select Book
+# option 1 Checkout Book
     if choose_option == option1:
         if(len(select_books) == 3):
             print('\n----------------------------')
