@@ -129,7 +129,7 @@ while (b):
             print('Registered in any course before select option 2')
             print('-----------------------------------------------')
         else:
-            file = open('{0}.txt'.format(data[0]),"r")
+            file = open('{0}.txt'.format(data[0]),'r')
             print('\nYou are registered in these courses:')
             print('------------------------------------')
             j = 0
@@ -137,7 +137,7 @@ while (b):
                 j += 1
                 print(' '.join([str(j),i]) )
             sel_c = (input("\nPlease select the course to unregistered OR Press y to Main Menu: "))
-            file = open('{0}.txt'.format(data[0]),"a")
+            file = open('{0}.txt'.format(data[0]),'a')
             if(sel_c == 'y'):
                 continue #The continue statement in Python returns the control to the beginning of the while loop or for loop
 
