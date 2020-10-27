@@ -52,7 +52,7 @@ while (b):
         if float(i) + 60 > time.time():
             timeexceed = False
         else:
-            print('return books. Your rent time is over')
+            # print('return books. Your rent time is over')
             timeexceed = True
             server.sendmail(fromaddr, toaddrs, msg)
             continue
