@@ -5,12 +5,12 @@ import datetime
 
 available_books = ["Harry Potter", 'The Twilight Saga',"The Lord of the Rings","The Hobbit","The Top Ten","The Great Gatsby", "Steve Jobs", "Long Walk to Freedom",]
 a_books = [line.rstrip('\n') for line in (available_books)]
-msg = 'Please return the book as soon as an '
+# msg = 'Please return the book as soon as posible and '
 username = 'librarykarachi@gmail.com'
 password = '0000Qwerty'
-# server = smtplib.SMTP('smtp.gmail.com: 587')
-# server.starttls()
-# server.login(username , password)
+server = smtplib.SMTP('smtp.gmail.com: 587')
+server.starttls()
+server.login(username , password)
 
 print('*************************************')
 print('*     Library Management System     *')
@@ -21,18 +21,18 @@ name_data = [ask_name] # store user naem
 email_data = [ask_email] # store user email
 fromaddr = 'librarykarachi@gmail.com'
 toaddrs  = ('{0}'.format(email_data[0]))
-msg = 'Please return the book as soon as posibale'
+msg = 'Please return the book as soon as posibale and your fine is Rupees 10'
 store_time = []
 select_books = []
 
 if Path('{0}.txt'.format(name_data[0])).is_file(): # checking file exist
     file = open('{0}.txt'.format(name_data[0]),"r")
     i = 1
-    f = open(name_data[0] + ".txt" )
+    # f = open(name_data[0] + ".txt" )
     print('\n--------------------')
     print('Welcome Back ' + ask_name)
     print('--------------------\n')
-    for line in f.readlines():
+    for line in file.readlines():
         if i % 2 == 0:
             store_time.append(line.rstrip('\n'))
         else:
@@ -49,8 +49,7 @@ b=True
 while (b):
 
     for i in store_time:
-        if float(i) + 60*60 > time.time():
-            print("Still have time to return")
+        if float(i) + 60 > time.time():
             timeexceed = False
         else:
             print('return books. Your rent time is over')
@@ -96,7 +95,6 @@ while (b):
                 rent = time.time()
                 store_time.append('{0}'.format(rent))
                 file.write(str('%s\n'% '{0}'.format(rent)))
-                # del store_time[0]
             elif (b_select == 1 and a_books[0] in select_books):
                 print('\nYou are already rented this book')
 
@@ -107,7 +105,6 @@ while (b):
                 rent = time.time()
                 store_time.append('{0}'.format(rent))
                 file.write(str('%s\n'% '{0}'.format(rent)))
-                # del store_time[0]
             elif (b_select == 2 and a_books[1] in select_books):
                 print('\nYou are already rented this book')
 
@@ -118,7 +115,6 @@ while (b):
                 rent = time.time()
                 store_time.append('{0}'.format(rent))
                 file.write(str('%s\n'% '{0}'.format(rent)))
-                # del store_time[0]
             elif (b_select == 3 and a_books[2] in select_books):
                 print('\nYou are already rented this book')
 
@@ -129,7 +125,6 @@ while (b):
                 rent = time.time()
                 store_time.append('{0}'.format(rent))
                 file.write(str('%s\n'% '{0}'.format(rent)))
-                # del store_time[0]
             elif (b_select == 4 and a_books[3] in select_books):
                 print('\nYou are already rented this book')
 
@@ -140,7 +135,6 @@ while (b):
                 rent = time.time()
                 store_time.append('{0}'.format(rent))
                 file.write(str('%s\n'% '{0}'.format(rent)))
-                # del store_time[0]
             elif (b_select == 5 and a_books[4] in select_books):
                 print('\nYou are already rented this book')
 
@@ -151,7 +145,6 @@ while (b):
                 rent = time.time()
                 store_time.append('{0}'.format(rent))
                 file.write(str('%s\n'% '{0}'.format(rent)))
-                # del store_time[0]
             elif (b_select == 6 and a_books[5] in select_books):
                 print('\nYou are already rented this book')
 
@@ -162,7 +155,6 @@ while (b):
                 rent = time.time()
                 store_time.append('{0}'.format(rent))
                 file.write(str('%s\n'% '{0}'.format(rent)))
-                # del store_time[0]
             elif (b_select == 7 and a_books[6] in select_books):
                 print('\nYou are already rented this book')
 
@@ -173,7 +165,6 @@ while (b):
                 rent = time.time()
                 store_time.append('{0}'.format(rent))
                 file.write(str('%s\n'% '{0}'.format(rent)))
-                # del store_time[0]
             elif (b_select == 8 and a_books[7] in select_books):
                 print('\nYou are already rented this book')
 
@@ -193,8 +184,8 @@ while (b):
             ask_to_r = (int(input("\nSelect the book to return AND Press 0 to Return all books: ")))
             now = datetime.datetime.now()
             if ask_to_r == 0:
-                select_books=[]
-                store_time=[]
+                select_books = []
+                store_time = []
                 file = open('{0}.txt'.format(name_data[0]),'w')
             elif (ask_to_r == 1):
                 print('\n',select_books[0],end=" return at ")
@@ -236,7 +227,7 @@ while (b):
             for i in s_books: # this loop using for add numbering
                 print('{}. {:25s} '.format(count+1,i), end="")
                 print('{:25s} '.format(time.strftime("%m/%d/%Y, %H:%M:%S", time.localtime(float(store_time[count])))), end="")
-                print('{:20s} '.format(time.strftime("%m/%d/%Y, %H:%M:%S", time.localtime(float(store_time[count])+ 60*60)) ))
+                print('{:20s} '.format(time.strftime("%m/%d/%Y, %H:%M:%S", time.localtime(float(store_time[count])+ 60)) ))
                 count += 1
 
             r = (int(input("\npress 1 to return Main Menu and press 0 to exit: ")))
